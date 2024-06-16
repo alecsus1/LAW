@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="parole chiave che descrivono la pagina">
+    <meta name="description" content="descrizione del contenuto della pagina">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina di HTML e CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* Imposta il font per tutto il corpo della pagina */
+            margin: 0;
+            /* Rimuove il margine predefinito del browser */
+            padding: 0;
+            /* Rimuove il padding predefinito del browser */
+            box-sizing: border-box;
+            /* Include il padding e il bordo nelle dimensioni totali degli elementi */
+        }
+
+        header {
+            background-color: #4CAF50;
+            /* Imposta il colore di sfondo dell'intestazione */
+            color: white;
+            /* Imposta il colore del testo dell'intestazione */
+            text-align: center;
+            /* Centra il testo dell'intestazione */
+            padding: 1em;
+            /* Aggiunge un padding di 1em intorno all'intestazione */
+        }
+
+        nav {
+            background-color: #333;
+            /* Imposta il colore di sfondo della barra di navigazione */
+        }
+
+        nav ul {
+            list-style: none;
+            /* Rimuove i punti elenco dagli elementi della lista */
+            padding: 0;
+            /* Rimuove il padding predefinito */
+            margin: 0;
+            /* Rimuove il margine predefinito */
+            display: flex;
+            /* Utilizza flexbox per posizionare gli elementi in una riga */
+        }
+
+        nav ul li {
+            position: relative;
+            /* Imposta la posizione relativa per permettere il posizionamento assoluto dei dropdown */
+        }
+
+        nav ul li a {
+            color: white;
+            /* Imposta il colore del testo dei link di navigazione */
+            text-decoration: none;
+            /* Rimuove la sottolineatura dei link */
+            padding: 14px 20px;
+            /* Aggiunge un padding di 14px sopra e sotto, e 20px a sinistra e a destra dei link */
+            display: block;
+            /* Imposta i link come blocchi per occupare tutta l'area del loro contenitore */
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            /* Cambia il colore di sfondo quando l'utente passa il mouse sopra il link */
+        }
+
+        nav ul li ul {
+            display: none;
+            /* Nasconde il dropdown per default */
+            position: absolute;
+            /* Posiziona il dropdown in modo assoluto rispetto al genitore */
+            top: 100%;
+            /* Posiziona il dropdown immediatamente sotto il genitore */
+            left: 0;
+            /* Allinea il dropdown a sinistra del genitore */
+            background-color: #333;
+            /* Imposta il colore di sfondo del dropdown */
+            list-style: none;
+            /* Rimuove i punti elenco dagli elementi della lista nel dropdown */
+            padding: 0;
+            /* Rimuove il padding predefinito */
+            margin: 0;
+            /* Rimuove il margine predefinito */
+            z-index: 1;
+            /* Imposta un livello di z-index alto per assicurare che il dropdown sia sopra altri contenuti */
+        }
+
+        nav ul li:hover ul {
+            display: block;
+            /* Mostra il dropdown quando il genitore viene hoverato */
+        }
+
+        nav ul li ul li {
+            width: 200px;
+            /* Imposta la larghezza degli elementi del dropdown */
+        }
+
+
+        main {
+            display: flex;
+            /* Utilizza flexbox per disporre il contenuto principale */
+
+            flex-direction: column;
+            /* Quando la larghezza dello schermo è inferiore a 768px
+			            l’elemento <aside> scorre sotto l’elemento <section> */
+           flex:1;
+                           
+        }
+
+        @media (min-width: 768px) {
+            main {
+                flex-direction: row;
+                /* Quando la larghezza dello schermo è superiore a 768px l’elemento <aside>
+			        è affiancato all’elemento <section> */
+                padding: 20px;
+                /* Aggiunge un padding di 20px intorno al contenuto principale */
+            }
+        }
+
+
+        section {
+            flex: 3;
+            /* Imposta la sezione principale per occupare tre volte lo spazio dell'aside */
+            padding-right: 20px;
+            /* Aggiunge un padding a destra di 20px */
+        }
+
+        aside {
+            flex: 1;
+            /* Imposta l'aside per occupare un terzo dello spazio della sezione principale */
+            background-color: #f4f4f4;
+            /* Imposta il colore di sfondo dell'aside */
+            padding: 20px;
+            /* Aggiunge un padding di 20px intorno all'aside */
+            
+        }
+
+        footer {
+            background-color: #333;
+            /* Imposta il colore di sfondo del footer */
+            color: white;
+            /* Imposta il colore del testo del footer */
+            text-align: center;
+            /* Centra il testo del footer */
+            padding: 10px 0;
+            /* Aggiunge un padding di 10px sopra e sotto il footer */
+            /* Posiziona il footer in fondo alla pagina */
+            width: 100%;
+            /* Imposta la larghezza del footer per occupare l'intera larghezza della pagina */
+            margin-top: auto; /* Sposta il footer fino alla fine della viewport */
+        }
+
+        form {
+            display: flex;
+            /* Utilizza flexbox per disporre gli elementi del form */
+            flex-direction: column;
+            /* Dispone gli elementi del form in una colonna */
+        }
+
+        form label {
+            margin-top: 10px;
+            /* Aggiunge un margine superiore di 10px ai label */
+        }
+
+        form input,
+        form button {
+            margin-top: 5px;
+            /* Aggiunge un margine superiore di 5px agli input e ai button */
+        }
+
+        button {
+            width: 30%;
+            /* Imposta la larghezza del pulsante al 30% del contenitore genitore */
+        }
+
+        .contForm {
+            max-width: 350px;
+            /* Imposta la larghezza massima del contenitore del form a 350 pixel */
+        }
+
+        table {
+            text-align: center;
+            /* Centra il testo all'interno delle celle della tabella */
+            margin: auto;
+            /* Centra la tabella all'interno del suo contenitore */
+            width: 100%;
+            /* Imposta la larghezza della tabella al 100% del contenitore genitore */
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* Imposta il font della tabella */
+           
+        }
+
+        th {
+            background-color: green;
+            /* Imposta il colore di sfondo delle celle dell'intestazione della tabella */
+            border: 1px solid white;
+            /* Aggiunge un bordo bianco di 1 pixel intorno alle celle dell'intestazione */
+            color: white;
+            /* Imposta il colore del testo delle celle dell'intestazione a bianco */
+        }
+
+        td {
+            border: 1px solid white;
+            /* Aggiunge un bordo bianco di 1 pixel intorno alle celle dei dati */
+        }
+
+        tr:nth-child(odd) {
+            background-color: beige;
+            /* Imposta il colore di sfondo delle righe dispari della tabella a beige */
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Occupa l'intera altezza della viewport (1 vh relativo all' 1% altezza viewport) */
+        }
+        
+    </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+        <h1>Benvenuti nel Laboratorio di Applicazioni Web</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chi Siamo</a></li>
+            <li><a href="#">Contatti</a></li>
+            <li>
+                <a href="#">Altro</a>
+                <ul>
+                    <li><a href="#">Opzione 1</a></li>
+                    <li><a href="#">Opzione 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Sezione Principale</h2>
+            <div class="contForm">
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </section>
+        <aside>
+            <h2>Informazioni Utili</h2>
+            <hr>
+            <table>
+                <caption>Utenti connessi</caption>
+                <thead>
+                    <tr>
+                        <th>nr</th>
+                        <th>username</th>
+                        <th>ore</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>marioR</td>
+                        <td>12:24</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>law</td>
+                        <td>15:20</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>jonnyDoe</td>
+                        <td>17:20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+    </main>
+    <footer>
+        <p>© 2024 LAW</p>
+    </footer>
+    </div>
+  
+</body>
+
+</html>
