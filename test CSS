@@ -179,6 +179,12 @@
         .contForm {
             max-width: 350px;
             /* Imposta la larghezza massima del contenitore del form a 350 pixel */
+ 	    max-width: 100%;
+            /* La larghezza massima del contenitore è 100% del suo contenitore genitore */
+        }
+	.contTable{
+            max-width:100%;
+            /* La larghezza massima del contenitore è 100% del suo contenitore genitore */
         }
 
         table {
@@ -255,33 +261,35 @@
         <aside>
             <h2>Informazioni Utili</h2>
             <hr>
-            <table>
-                <caption>Utenti connessi</caption>
-                <thead>
-                    <tr>
-                        <th>nr</th>
-                        <th>username</th>
-                        <th>ore</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>marioR</td>
-                        <td>12:24</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>law</td>
-                        <td>15:20</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>jonnyDoe</td>
-                        <td>17:20</td>
-                    </tr>
-                </tbody>
-            </table>
+	    <div class="contTable">
+	            <table>
+	                <caption>Utenti connessi</caption>
+	                <thead>
+	                    <tr>
+	                        <th>nr</th>
+	                        <th>username</th>
+	                        <th>ore</th>
+	                    </tr>
+	                </thead>
+	                <tbody>
+	                    <tr>
+	                        <td>1</td>
+	                        <td>marioR</td>
+	                        <td>12:24</td>
+	                    </tr>
+	                    <tr>
+	                        <td>2</td>
+	                        <td>law</td>
+	                        <td>15:20</td>
+	                    </tr>
+	                    <tr>
+	                        <td>3</td>
+	                        <td>jonnyDoe</td>
+	                        <td>17:20</td>
+	                    </tr>
+	                </tbody>
+	            </table>
+	     </div>
         </aside>
     </main>
     <footer>
