@@ -14,7 +14,7 @@
 <!-- bg-success: Imposta lo sfondo del header di colore verde (success). 
      text-white: Imposta il testo del header di colore bianco.
      text-center: Centra il testo orizzontalmente all'interno del header.
-     p-3: Aggiunge un padding di 1rem (3 * 0.25rem) attorno al header.
+     p-3: Aggiunge un padding di 1rem (16px) attorno al header.
 -->
         <h1>Benvenuti nel Laboratorio di Applicazioni Web</h1>
     </header>
@@ -82,7 +82,7 @@
     </nav>
     <main class="container mt-4">
 <!-- container: Contenitore con larghezza fissa e margini laterali automatici 
-     mt-4: Aggiunge un margine superiore di 1.5rem (4 * 0.25rem).
+     mt-4: Aggiunge un margine superiore di 1.5rem (24px).
 -->
         <div class="row">
 <!-- row: Definisce una riga per il sistema a griglia di Bootstrap. -->
@@ -94,7 +94,7 @@
       col-lg-4: Imposta una larghezza di 4 colonne (circa il 33.33%) su dispositivi di dimensioni grandi e superiori. -->
                 <form>
                     <div class="mb-3">
-<!-- mb-3: Aggiunge un margine inferiore di 1rem (3 * 0.25rem) attorno all'elemento. -->
+<!-- mb-3: Aggiunge un margine inferiore di 1rem (16px) attorno all'elemento. -->
                         <label for="username" class="form-label">Username:</label>
 <!-- form-label: Stile per le etichette dei campi del form. -->
                         <input type="text" class="form-control" id="username" name="username">
@@ -148,7 +148,7 @@ table-striped: Aggiunge bande alternate alle righe della tabella per una miglior
 <!-- bg-dark: Imposta lo sfondo del footer al colore scuro.
      text-white: Imposta il testo del footer al colore bianco.
      text-center: Centra il testo orizzontalmente all'interno del footer.
-     p-2: Aggiunge un padding di 0.5rem (2 * 0.25rem) attorno al footer.
+     p-2: Aggiunge un padding di 0.5rem (8px) attorno al footer.
      fixed-bottom: Posiziona il footer in fondo alla pagina, sempre visibile anche quando si scorre la pagina. 
 -->
         <p>© 2024 Pagina di Esempio</p>
