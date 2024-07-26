@@ -5,6 +5,6 @@ Creare un modulo di registrazione con campi che includono testo, password, email
 
 Istruzioni:
 
-- Creare un file HTML chiamato form-registrazione.html.
+- Creare un file HTML.
 - Aggiungere un'intestazione principale (h1) con il testo "Modulo di Registrazione".
 . Creare un modulo con i seguenti campi: nome utente (testo), password, email, numero di telefono, data di nascita (data), commenti (textarea) e un pulsante di invio.
