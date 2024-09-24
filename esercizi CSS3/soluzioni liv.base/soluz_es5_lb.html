@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina con Barra di Navigazione</title>
+    <style>
+                /* Stile generale della barra di navigazione */
+        nav {
+            display: flex;
+            justify-content: center; /* Allinea i collegamenti al centro */
+            background-color: #333; /* Colore di sfondo scuro per la barra di navigazione */
+            padding: 10px; /* Aggiunge spazio attorno ai collegamenti */
+        }
+
+        /* Stile dei collegamenti nella barra di navigazione */
+        nav a {
+            color: white; /* Colore del testo bianco per contrastare con lo sfondo scuro */
+            text-decoration: none; /* Rimuove la sottolineatura dai collegamenti */
+            padding: 10px 15px; /* Aggiunge spazio attorno ai collegamenti per rendere l'area cliccabile più grande */
+            display: inline-block; /* Permette al padding di influire sull'intera area cliccabile */
+        }
+
+        /* Stile hover per i collegamenti */
+        nav a:hover {
+            background-color: #575757; /* Cambia il colore di sfondo quando si passa il mouse sui collegamenti */
+        }
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#chi-siamo">Chi Siamo</a>
+    <a href="#contatti">Contatti</a>
+</nav>
+
+<section id="home">
+    <h2>Home</h2>
+    <p>Benvenuti nella nostra pagina principale!</p>
+</section>
+
+<section id="chi-siamo">
+    <h2>Chi Siamo</h2>
+    <p>Informazioni su di noi.</p>
+</section>
+
+<section id="contatti">
+    <h2>Contatti</h2>
+    <p>Come contattarci.</p>
+</section>
+
+</body>
+</html>
