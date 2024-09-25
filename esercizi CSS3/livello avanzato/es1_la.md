@@ -1,13 +1,12 @@
-Esercizio 1: 
+ESERCIZIO NR.1 
 
 Requisiti funzionali: 
-Creare una card che mostri informazioni come titolo, immagine e descrizione, che diventi interattiva al passaggio del mouse.
+Realizzare un layout completo di una pagina web utilizzando CSS Grid. La pagina deve includere un'intestazione (header), una barra laterale (aside), una sezione principale (section) e un piè di pagina (footer).
 
-Istruzioni:
+Indicazioni CSS:
 
-    - La card deve avere una larghezza massima del 300px, con un bordo sottile e angoli arrotondati.
-    - Al passaggio del mouse, la card deve sollevarsi leggermente.
-    - Applicare una transizione fluida di 0.3 secondi all’effetto hover per rendere il cambiamento graduale.
-    - L’immagine all’interno della card deve occupare il 100% della larghezza e mantenere le proporzioni corrette. Usare delle proprietà per ritagliare l'immagine se necessario.
-    - La descrizione della card deve essere limitata a un massimo di tre righe, e il testo in eccesso deve essere troncato.
-    - Usa media query per fare in modo che la larghezza della card passi dal 100% su schermi piccoli (smartphone) al 50% su tablet, e al 33% su desktop.
+- Impostare il layout della sezione principale usando grid, con due colonne: la prima colonna (barra laterale) dovrebbe occupare un quarto della larghezza disponibile, mentre la seconda colonna (sezione principale) tre quarti.
+- Aggiungere una spaziatura tra le colonne utilizzando la proprietà di gap.
+- L'header e il footer devono avere un colore di sfondo scuro e un testo di colore bianco. Centrare il testo e aggiungere del padding interno per migliorare l'estetica.
+- Assicurare che il footer si estenda per tutta la larghezza disponibile e sia sempre visibile alla fine della pagina.
+- La barra laterale e la sezione principale devono avere un padding interno e un bordo sottile, con colori che creino contrasto.

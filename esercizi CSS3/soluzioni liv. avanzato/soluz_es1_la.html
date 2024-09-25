@@ -3,59 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Responsive</title>
+    <title>Layout Grid</title>
     <style>
-        .card {
-            width: 100%;
-            max-width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
+        body {
+            font-family: Arial, sans-serif; /* Imposta un font semplice per l'intera pagina */
+            margin: 0; /* Rimuove i margini predefiniti del browser */
+            padding: 0; /* Rimuove i padding predefiniti */
         }
 
-        .card:hover {
-            transform: scale(1.05);
+        header {
+            background-color: #333; /* Colore di sfondo scuro per l'header */
+            color: white; /* Colore del testo bianco */
+            padding: 20px; /* Aggiunge spazio interno all'header */
+            text-align: center; /* Centra il testo */
         }
 
-        .card img {
-            width: 100%;
-            object-fit: cover;
+        main {
+            display: grid; /* Applica il layout a griglia alla sezione principale */
+            grid-template-columns: 25% 75%; /* Due colonne: la prima occupa 1/4 della larghezza, la seconda 3/4 */
+            gap: 20px; /* Aggiunge uno spazio di 20px tra le colonne */
+            padding: 20px; /* Aggiunge padding interno a tutto il main */
         }
 
-        .card h3 {
-            margin: 10px;
+        aside {
+            background-color: #f4f4f4; /* Colore di sfondo chiaro per la barra laterale */
+            padding: 20px; /* Aggiunge spazio interno alla barra laterale */
         }
 
-        .card p {
-            margin: 10px;
-            max-height: 4.5em; /* 3 righe */
-            overflow: hidden;
-            text-overflow: ellipsis;
-            line-height: 1.5;
+        section {
+            background-color: #fff; /* Sfondo bianco per la sezione principale */
+            padding: 20px; /* Aggiunge spazio interno */
+            border: 1px solid #ccc; /* Aggiunge un bordo grigio chiaro */
         }
 
-        @media (min-width: 768px) {
-            .card {
-                width: 50%;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .card {
-                width: 33%;
-            }
+        footer {
+            background-color: #333; /* Sfondo scuro per il footer */
+            color: white; /* Colore del testo bianco */
+            text-align: center; /* Centra il testo */
+            padding: 10px; /* Aggiunge spazio interno */
+            position: relative; /* Imposta il footer come "relativo" */
+            bottom: 0; /* Posiziona il footer in basso */
+            width: 100%; /* Il footer occupa tutta la larghezza */
         }
 
     </style>
-</head>
+   </head>
 <body>
 
-<div class="card">
-    <img src="immagine.jpg" alt="Immagine della Card">
-    <h3>Titolo della Card</h3>
-    <p>Questa è una descrizione della card. Il testo è troncato se supera le tre righe di lunghezza.</p>
-</div>
+    <header>
+        <h1>Benvenuto nel mio sito</h1>
+    </header>
+
+    <main>
+        <aside>
+            <h2>Barra Laterale</h2>
+            <p>Questo è il contenuto della barra laterale.</p>
+        </aside>
+
+        <section>
+            <h2>Sezione Principale</h2>
+            <p>Questo è il contenuto della sezione principale.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 - Tutti i diritti riservati</p>
+    </footer>
 
 </body>
 </html>
