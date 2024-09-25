@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form di Contatto</title>
+    <style>
+        .contact-form {
+            max-width: 400px; /* Imposta la larghezza massima del form a 400px */
+            margin: 0 auto; /* Centra il modulo orizzontalmente */
+            padding: 20px; /* Aggiunge spazio interno al modulo */
+            border: 1px solid #ccc; /* Aggiunge un bordo grigio chiaro */
+            border-radius: 10px; /* Arrotonda i bordi del modulo */
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%; /* I campi di input e textarea occupano il 100% della larghezza disponibile */
+            padding: 10px; /* Aggiunge spazio interno ai campi */
+            margin-bottom: 15px; /* Aggiunge spazio sotto ogni campo */
+            border: 1px solid #ccc; /* Aggiunge un bordo grigio chiaro ai campi */
+            border-radius: 5px; /* Arrotonda leggermente i bordi dei campi */
+            box-sizing: border-box; /* Assicura che padding e bordi siano inclusi nella larghezza totale */
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #007BFF; /* Cambia il colore del bordo quando il campo è attivo (focus) */
+        }
+
+        .contact-form button {
+            padding: 10px 20px; /* Aggiunge spazio interno al pulsante */
+            border: none; /* Rimuove il bordo del pulsante */
+            border-radius: 5px; /* Arrotonda i bordi del pulsante */
+            background-color: #007BFF; /* Imposta un colore di sfondo blu per il pulsante */
+            color: white; /* Colore del testo bianco */
+            cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3; /* Cambia il colore del pulsante quando l'utente passa sopra col mouse */
+        }
+
+        @media (max-width: 600px) {
+            .contact-form {
+                width: 100%; /* Il modulo occupa il 100% della larghezza su schermi piccoli */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<form class="contact-form">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="message">Messaggio:</label>
+    <textarea id="message" name="message"></textarea>
+
+    <button type="submit">Invia</button>
+</form>
+
+</body>
+</html>

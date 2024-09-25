@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Responsive</title>
+    <style>
+        .card {
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 10px;
+        }
+
+        .card p {
+            margin: 10px;
+            max-height: 4.5em; /* 3 righe */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            .card {
+                width: 50%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .card {
+                width: 33%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="immagine.jpg" alt="Immagine della Card">
+    <h3>Titolo della Card</h3>
+    <p>Questa è una descrizione della card. Il testo è troncato se supera le tre righe di lunghezza.</p>
+</div>
+
+</body>
+</html>
