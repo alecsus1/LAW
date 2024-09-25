@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleria Immagini</title>
+    <style>
+        .gallery {
+            display: grid; /* Usa il layout a griglia per le immagini */
+            grid-template-columns: repeat(3, 1fr); /* Crea tre colonne di larghezza uguale */
+            gap: 10px; /* Aggiunge uno spazio di 10px tra le immagini */
+        }
+
+        .gallery img {
+            width: 100%; /* Le immagini occupano il 100% della larghezza delle colonne */
+            height: auto; /* Mantiene le proporzioni originali delle immagini */
+            border: 1px solid #ccc; /* Aggiunge un bordo sottile intorno alle immagini */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera sotto le immagini */
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr; /* Su schermi piccoli, le immagini sono disposte in una colonna */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<section class="gallery">
+    <img src="image1.jpg" alt="Immagine 1">
+    <img src="image2.jpg" alt="Immagine 2">
+    <img src="image3.jpg" alt="Immagine 3">
+    <img src="image4.jpg" alt="Immagine 4">
+    <img src="image5.jpg" alt="Immagine 5">
+    <img src="image6.jpg" alt="Immagine 6">
+</section>
+
+</body>
+</html>

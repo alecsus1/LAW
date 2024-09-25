@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card con Effetto Hover</title>
+    <style>
+        .card {
+            max-width: 300px; /* Limita la larghezza massima della card a 300px */
+            margin: 0 auto; /* Centra la card orizzontalmente */
+            padding: 20px; /* Aggiunge spazio interno alla card */
+            border: 1px solid #ccc; /* Aggiunge un bordo sottile grigio alla card */
+            border-radius: 10px; /* Arrotonda i bordi della card */
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+            transition: transform 0.3s, box-shadow 0.3s; /* Crea una transizione fluida per lo zoom e l'ombra */
+            text-align: center; /* Allinea il contenuto della card al centro */
+        }
+
+        .card img {
+            width: 100%; /* L'immagine occupa il 100% della larghezza della card */
+            border-radius: 10px; /* Arrotonda i bordi dell'immagine */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Ingrandisce leggermente la card al passaggio del mouse */
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2); /* Aumenta l'ombra al passaggio del mouse */
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="card-image.jpg" alt="Immagine Card">
+    <h2>Titolo della Card</h2>
+    <p>Descrizione della card con qualche testo di esempio.</p>
+</div>
+
+</body>
+</html>

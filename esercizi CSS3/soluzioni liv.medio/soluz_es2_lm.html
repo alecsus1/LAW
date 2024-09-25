@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra di Navigazione</title>
+    <style>
+        nav {
+            display: flex; /* Usa flexbox per allineare i link in fila */
+            justify-content: space-around; /* Spazia i link in modo uniforme */
+            background-color: #333; /* Colore di sfondo scuro per la barra di navigazione */
+            padding: 10px; /* Aggiunge spazio interno alla barra */
+            position: sticky; /* Fa sì che la barra resti visibile quando si scorre la pagina */
+            top: 0; /* Fissa la barra nella parte superiore della pagina */
+            z-index: 1000; /* Aumenta la priorità di visualizzazione della barra */
+        }
+
+        nav a {
+            color: white; /* Colore del testo bianco per i link */
+            text-decoration: none; /* Rimuove la sottolineatura dai link */
+            padding: 10px 20px; /* Aggiunge spazio intorno ai link */
+        }
+
+        nav a:hover {
+            background-color: #575757; /* Cambia il colore di sfondo dei link al passaggio del mouse */
+        }
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#contatti">Contatti</a>
+</nav>
+
+<section>
+    <p>Contenuto della pagina...</p>
+</section>
+
+</body>
+</html>

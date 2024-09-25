@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer con Link Social</title>
+    <style>
+        footer {
+            display: flex; /* Usa flexbox per disporre le icone in fila */
+            justify-content: center; /* Centra le icone orizzontalmente */
+            gap: 20px; /* Aggiunge uno spazio di 20px tra le icone */
+            padding: 20px; /* Aggiunge spazio interno al footer */
+            background-color: #333; /* Colore di sfondo scuro per il footer */
+        }
+
+        footer img {
+            width: 40px; /* Imposta la larghezza delle icone a 40px */
+            height: 40px; /* Imposta l'altezza delle icone a 40px */
+            transition: transform 0.3s; /* Aggiunge una transizione fluida per l'effetto hover */
+            color:white;
+        }
+
+        footer img:hover {
+            transform: scale(1.2); /* Ingrandisce le icone del 20% al passaggio del mouse */
+        }
+
+    </style>
+</head>
+<body>
+
+<footer>
+    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+    <a href="#"><img src="twitter.png" alt="Twitter"></a>
+    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+</footer>
+
+</body>
+</html>
