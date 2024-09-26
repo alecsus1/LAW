@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Flexbox Responsive</title>
+    <style>
+        .container {
+            display: flex; /* Applica il layout flexbox */
+            flex-wrap: wrap; /* Permette il wrapping degli elementi su righe multiple */
+            gap: 20px; /* Aggiunge uno spazio tra gli elementi */
+            padding: 20px; /* Spazio interno per il contenitore */
+        }
+
+        .box {
+            background-color: #f4f4f4; /* Sfondo chiaro per ogni box */
+            padding: 20px; /* Aggiunge spazio interno */
+            border: 1px solid #ccc; /* Bordo grigio chiaro */
+            flex: 1 1 calc(33.333% - 40px); /* Ogni box occupa un terzo dello spazio con gap incluso */
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                flex: 1 1 calc(50% - 20px); /* Su schermi più piccoli, i box occupano metà dello spazio */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .box {
+                flex: 1 1 100%; /* Su schermi molto piccoli, ogni box occupa il 100% della larghezza */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div>
+    </div>
+
+</body>
+</html>
+
+

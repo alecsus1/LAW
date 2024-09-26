@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown con CSS</title>
+    <style>
+        /* Rimuove i punti elenco e margini/padding predefiniti per la lista */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Colore di sfondo del menu */
+        }
+
+        /* Ogni elemento della lista (voce di menu) viene visualizzato in linea */
+        ul li {
+            display: inline-block; /* Disposizione orizzontale delle voci di menu */
+            position: relative; /* Necessario per posizionare il dropdown all'interno di questo elemento */
+        }
+
+        /* Stile dei link nelle voci di menu */
+        ul li a {
+            display: block; /* Trasforma il link in un blocco cliccabile per tutta la sua area */
+            color: white; /* Colore del testo dei link */
+            padding: 14px 20px; /* Spaziatura interna per rendere i link cliccabili più facilmente */
+            text-decoration: none; /* Rimuove la sottolineatura predefinita */
+        }
+
+        /* Effetto hover sui link principali (cambia il colore di sfondo) */
+        ul li a:hover {
+            background-color: #575757; /* Cambia il colore di sfondo quando si passa con il mouse */
+        }
+
+        /* Stile del sottomenu (dropdown), inizialmente nascosto */
+        ul li ul {
+            display: none; /* Nasconde il sottomenu */
+            position: absolute; /* Posiziona il sottomenu in modo assoluto rispetto al genitore */
+            top: 100%; /* Fa apparire il sottomenu esattamente sotto la voce principale */
+            left: 0; /* Allinea il sottomenu a sinistra della voce principale */
+            background-color: #333; /* Colore di sfondo del sottomenu */
+            min-width: 160px; /* Larghezza minima del sottomenu */
+        }
+
+        /* Disposizione delle voci all'interno del sottomenu */
+        ul li ul li {
+            display: block; /* Disposizione verticale delle voci nel sottomenu */
+        }
+
+        /* Stile dei link all'interno del sottomenu */
+        ul li ul li a {
+            padding: 10px 20px; /* Spaziatura interna per i link del dropdown */
+            color: white; /* Colore del testo dei link del dropdown */
+        }
+
+        /* Effetto hover sui link del sottomenu (cambia il colore di sfondo) */
+        ul li ul li a:hover {
+            background-color: #575757; /* Cambia il colore di sfondo quando si passa con il mouse sui link del sottomenu */
+        }
+
+        /* Visualizza il sottomenu quando si passa con il mouse sulla voce principale */
+        ul li:hover ul {
+            display: block; /* Mostra il sottomenu quando si passa sopra la voce principale */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu principale -->
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Servizi</a></li>
+        <li>
+            <a href="#">Prodotti</a>
+            <ul>
+                <li><a href="#">Prodotto 1</a></li>
+                <li><a href="#">Prodotto 2</a></li>
+                <li><a href="#">Prodotto 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Chi Siamo</a></li>
+        <li><a href="#">Contatti</a></li>
+    </ul>
+
+</body>
+</html>
+
