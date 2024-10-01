@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteggio Caratteri</title>
+</head>
+<body>
+
+    <h2>Conteggio dei Caratteri Inseriti</h2>
+
+    <!-- Campo di input -->
+    <label for="testo">Inserisci il testo:</label>
+    <input type="text" id="testo" placeholder="Scrivi qualcosa..." oninput="contaCaratteri()">
+    <br><br>
+
+    <!-- Area per visualizzare il numero di caratteri -->
+    <p>Caratteri inseriti: <span id="numeroCaratteri">0</span></p>
+
+    <script>
+        // Funzione per contare i caratteri inseriti nel campo di input
+        function contaCaratteri() {
+            // Ottieni il valore del campo di input
+            let testo = document.getElementById("testo").value;
+
+            // Calcola la lunghezza del testo e mostra il risultato
+            document.getElementById("numeroCaratteri").innerText = testo.length;
+        }
+    </script>
+
+</body>
+</html>

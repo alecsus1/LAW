@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+</head>
+<body>
+
+    <h2>Cronometro</h2>
+
+    <!-- Visualizzazione del tempo -->
+    <p>Tempo: <span id="tempo">0</span> secondi</p>
+
+    <!-- Pulsanti -->
+    <button onclick="startCronometro()">Start</button>
+    <button onclick="stopCronometro()">Stop</button>
+    <button onclick="resetCronometro()">Reset</button>
+
+    <script>
+        let tempo = 0;
+        let cronometro;
+
+        function startCronometro() {
+            cronometro = setInterval(function() {
+                tempo++;
+                document.getElementById('tempo').innerText = tempo;
+            }, 1000);
+        }
+
+        function stopCronometro() {
+            clearInterval(cronometro);
+            tempo=document.getElementById('tempo').innerText
+        }
+
+        function resetCronometro() {
+            clearInterval(cronometro);
+            tempo = 0;
+            document.getElementById('tempo').innerText = tempo;
+        }
+    </script>
+
+</body>
+</html>
