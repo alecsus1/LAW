@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+</head>
+<body>
+
+    <h2>Countdown</h2>
+
+    <input type="number" id="countdownNumero" placeholder="Inserisci un numero">
+    <button onclick="avviaCountdown()">Avvia Countdown</button>
+    <button onclick="pauseCountdown()">Pausa Countdown</button>
+
+    <p>Tempo rimanente: <span id="tempoRimanente"></span></p>
+
+    <script>
+        let intervallo;
+        let numero;
+        function avviaCountdown() {
+            if (numero == undefined) {
+               numero = parseInt(document.getElementById('countdownNumero').value);
+            }
+            intervallo = setInterval(function() {
+                document.getElementById('tempoRimanente').innerText = numero;
+                numero--;
+
+                if (numero < 0) {
+                    clearInterval(intervallo);
+                    document.getElementById('tempoRimanente').innerText = "Fine!";
+                }
+            }, 1000);
+        }
+        function pauseCountdown(){
+            clearInterval(intervallo);
+            numero = parseInt(document.getElementById('tempoRimanente').innerText);
+            console.log(numero);
+        }
+    </script>
+
+</body>
+</html>

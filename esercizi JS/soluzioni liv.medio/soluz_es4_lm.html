@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio di Colore</title>
+</head>
+<body>
+
+    <h2>Cambio di Colore al Click</h2>
+
+    <!-- Pulsante -->
+    <button onclick="cambiaColore()">Cambia Colore</button>
+
+    <script>
+        function cambiaColore() {
+            let colore = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = colore;
+        }
+    </script>
+
+</body>
+</html>
