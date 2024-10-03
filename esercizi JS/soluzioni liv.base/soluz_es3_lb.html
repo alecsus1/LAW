@@ -9,24 +9,24 @@
 
     <h2>Verifica se un Numero è Pari o Dispari</h2>
 
-    <label for="numero">Numero:</label>
-    <input type="number" id="numero" placeholder="Inserisci un numero">
+    <label for="numb">Numero:</label>
+    <input type="number" id="numb" placeholder="Inserisci un numero">
     <br><br>
 
-    <button onclick="verificaPariDispari()">Verifica</button>
+    <button onclick="checksEvenOdd()">Verifica</button>
 
-    <p>Il numero è: <span id="risultatoPariDispari"></span></p>
+    <p>Il numero è: <span id="resultEvenOdd"></span></p>
 
     <script>
-        function verificaPariDispari() {
-            let numero = document.getElementById("numero").value;
-            let risultato;
-            if (numero % 2 === 0) {
-                risultato = "Pari";
+        function checksEvenOdd() {
+            let numb = document.getElementById("numb").value;
+            let result;
+            if (numb % 2 === 0) {
+                result = "Pari";
             } else {
-                risultato = "Dispari";
+                result = "Dispari";
             }
-            document.getElementById("risultatoPariDispari").innerText = risultato;
+            document.getElementById("resultEvenOdd").innerText = result;
         }
     </script>
 

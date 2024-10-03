@@ -9,7 +9,7 @@
 
     <h2>Modulo di Registrazione</h2>
 
-    <form onsubmit="return validaModulo()">
+    <form onsubmit="return validateForm()">
         <label for="username">Nome utente:</label>
         <input type="text" id="username" placeholder="Inserisci il nome utente">
         <br><br>
@@ -23,28 +23,28 @@
         <br><br>
 
         <button type="submit">Registrati</button>
-        <p id="errore" style="color:red;"></p>
+        <p id="error" style="color:red;"></p>
     </form>
 
     <script>
-        function validaModulo() {
+        function validateForm() {
             let username = document.getElementById('username').value;
             let email = document.getElementById('email').value;
             let password = document.getElementById('password').value;
-            let errore = '';
+            let error = '';
 
             if (!username) {
-                errore = 'Il nome utente è obbligatorio.';
+                error = 'Il nome utente è obbligatorio.';
             } else if (!email.includes('@')) {
-                errore = 'L\'email non è valida.';
+                error = 'L\'email non è valida.';
             } else if (!email.includes('.')) {
-                errore = 'L\'email non è valida.';
+                error = 'L\'email non è valida.';
             } else if (password.length < 6) {
-                errore = 'La password deve avere almeno 6 caratteri.';
+                error = 'La password deve avere almeno 6 caratteri.';
             }
 
-            if (errore) {
-                document.getElementById('errore').innerText = errore;
+            if (error) {
+                document.getElementById('error').innerText = error;
                 return false;
             }
 

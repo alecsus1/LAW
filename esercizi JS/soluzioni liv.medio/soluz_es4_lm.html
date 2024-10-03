@@ -10,12 +10,12 @@
     <h2>Cambio di Colore al Click</h2>
 
     <!-- Pulsante -->
-    <button onclick="cambiaColore()">Cambia Colore</button>
+    <button onclick="changeColor()">Cambia Colore</button>
 
     <script>
-        function cambiaColore() {
-            let colore = '#' + Math.floor(Math.random()*16777215).toString(16);
-            document.body.style.backgroundColor = colore;
+        function changeColor() {
+            let color = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = color;
         }
     </script>
 

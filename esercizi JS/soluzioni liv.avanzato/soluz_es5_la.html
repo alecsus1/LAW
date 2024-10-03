@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Pomodoro</title>
+</head>
+<body>
+
+    <h2>Timer Pomodoro</h2>
+    <p>Tempo rimanente: <span id="remainingTime">25:00</span></p>
+    <button onclick="startTomato()">Avvia Timer</button>
+
+    <script>
+        let work = 25 * 60;  // 25 minuti in secondi
+        let pause = 5 * 60;  // 5 minuti in secondi
+        let inWork = true;
+        let interval;
+
+        function startTomato() {
+            clearInterval(interval);
+            let remainingTime = inWork ? work : pause;
+            interval = setInterval(() => {
+                let minute = Math.floor(remainingTime / 60);
+                let second = remainingTime % 60;
+                document.getElementById('remainingTime').innerText = `${minute}:${second < 10 ? '0' : ''}${second}`;
+                remainingTime--;
+
+                if (remainingTime < 0) {
+                    clearInterval(interval);
+                    alert(inWork ? 'Sessione di lavoro terminata, fai una pausa!' : 'Pausa terminata, torna al lavoro!');
+                    inWork = !inWork;
+                    startTomato();  // Riparte con la fase successiva
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>

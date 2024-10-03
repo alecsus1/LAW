@@ -9,19 +9,19 @@
 
     <h2>Calcola il Quadrato di un Numero</h2>
 
-    <label for="numero">Numero:</label>
-    <input type="number" id="numero" placeholder="Inserisci un numero">
+    <label for="numb">Numero:</label>
+    <input type="number" id="numb" placeholder="Inserisci un numero">
     <br><br>
 
-    <button onclick="calcolaQuadrato()">Calcola Quadrato</button>
+    <button onclick="calculateSquare()">Calcola Quadrato</button>
 
-    <p>Il quadrato è: <span id="risultatoQuadrato"></span></p>
+    <p>Il quadrato è: <span id="resultSquare"></span></p>
 
     <script>
-        function calcolaQuadrato() {
-            let numero = document.getElementById("numero").value;
-            let quadrato = Number(numero) * Number(numero);
-            document.getElementById("risultatoQuadrato").innerText = quadrato;
+        function calculateSquare() {
+            let numb = document.getElementById("numb").value;
+            let square = Number(numb) * Number(numb);
+            document.getElementById("resultSquare").innerText = square;
         }
     </script>
 

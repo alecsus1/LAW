@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversione di Valuta</title>
+</head>
+<body>
+
+    <h2>Convertitore di Valuta</h2>
+    <input type="number" id="amount" placeholder="Inserisci l'importo">
+    <select id="originCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+    </select>
+    <select id="destinationCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+    </select>
+    <button onclick="convertCurrency()">Converti</button>
+
+    <p>Risultato: <span id="result"></span></p>
+
+    <script>
+        async function convertCurrency() {
+            let amount = document.getElementById('amount').value;
+            let originCurrency = document.getElementById('originCurrency').value;
+            let destinationCurrency = document.getElementById('destinationCurrency').value;
+
+            let url = `https://api.exchangerate-api.com/v4/latest/${originCurrency}`;
+            let response = await fetch(url);
+            let data = await response.json();
+            let rate = data.rates[destinationCurrency];
+            let result = amount * rate;
+
+            document.getElementById('result').innerText = result.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

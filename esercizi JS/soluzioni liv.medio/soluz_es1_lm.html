@@ -14,39 +14,39 @@
     <input type="number" id="num2" placeholder="Inserisci il secondo numero">
     <br><br>
 
-    <!-- Menu a tendina per scegliere l'operazione -->
-    <select id="operazione">
-        <option value="somma">Somma</option>
-        <option value="sottrazione">Sottrazione</option>
-        <option value="moltiplicazione">Moltiplicazione</option>
-        <option value="divisione">Divisione</option>
+    <!-- Menu a tendina per scegliere l'operation -->
+    <select id="operation">
+        <option value="sum">Somma</option>
+        <option value="subtraction">Sottrazione</option>
+        <option value="multiplication">Moltiplicazione</option>
+        <option value="division">Divisione</option>
     </select>
     <br><br>
 
     <!-- Pulsante per eseguire il calcolo -->
-    <button onclick="calcola()">Calcola</button>
+    <button onclick="calculate()">Calcola</button>
 
     <!-- Area per mostrare il risultato -->
-    <p>Risultato: <span id="risultato"></span></p>
+    <p>Risultato: <span id="result"></span></p>
 
     <script>
-        function calcola() {
+        function calculate() {
             let num1 = parseFloat(document.getElementById('num1').value);
             let num2 = parseFloat(document.getElementById('num2').value);
-            let operazione = document.getElementById('operazione').value;
-            let risultato;
+            let operation = document.getElementById('operation').value;
+            let result;
 
-            if (operazione === 'somma') {
-                risultato = num1 + num2;
-            } else if (operazione === 'sottrazione') {
-                risultato = num1 - num2;
-            } else if (operazione === 'moltiplicazione') {
-                risultato = num1 * num2;
-            } else if (operazione === 'divisione') {
-                risultato = num1 / num2;
+            if (operation === 'sum') {
+                result = num1 + num2;
+            } else if (operation === 'subtraction') {
+                result = num1 - num2;
+            } else if (operation === 'multiplication') {
+                result = num1 * num2;
+            } else if (operation === 'division') {
+                result = num1 / num2;
             }
 
-            document.getElementById('risultato').innerText = risultato;
+            document.getElementById('result').innerText = result;
         }
     </script>
 

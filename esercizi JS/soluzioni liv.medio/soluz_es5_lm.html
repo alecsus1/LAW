@@ -9,33 +9,32 @@
 
     <h2>Countdown</h2>
 
-    <input type="number" id="countdownNumero" placeholder="Inserisci un numero">
-    <button onclick="avviaCountdown()">Avvia Countdown</button>
+    <input type="number" id="startNumber" placeholder="Inserisci un numero">
+    <button onclick="startCountdown()">Avvia Countdown</button>
     <button onclick="pauseCountdown()">Pausa Countdown</button>
 
-    <p>Tempo rimanente: <span id="tempoRimanente"></span></p>
+    <p>Tempo rimanente: <span id="remainingTime"></span></p>
 
     <script>
-        let intervallo;
-        let numero;
-        function avviaCountdown() {
-            if (numero == undefined) {
-               numero = parseInt(document.getElementById('countdownNumero').value);
+        let interval;
+        let numb;
+        function startCountdown() {
+            if (numb == undefined) {
+               numb = parseInt(document.getElementById('startNumber').value);
             }
-            intervallo = setInterval(function() {
-                document.getElementById('tempoRimanente').innerText = numero;
-                numero--;
+            interval = setInterval(function() {
+                document.getElementById('remainingTime').innerText = numb;
+                numb--;
 
-                if (numero < 0) {
-                    clearInterval(intervallo);
-                    document.getElementById('tempoRimanente').innerText = "Fine!";
+                if (numb < 0) {
+                    clearInterval(interval);
+                    document.getElementById('remainingTime').innerText = "Fine!";
                 }
             }, 1000);
         }
         function pauseCountdown(){
-            clearInterval(intervallo);
-            numero = parseInt(document.getElementById('tempoRimanente').innerText);
-            console.log(numero);
+            clearInterval(interval);
+            numb = parseInt(document.getElementById('remainingTime').innerText);
         }
     </script>
 

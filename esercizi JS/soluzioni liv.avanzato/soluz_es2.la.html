@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro Dinamico della Tabella</title>
+</head>
+<body>
+    <h2>Lista Utenti</h2>
+    <input type="text" id="filter" placeholder="Cerca per nome o città..." oninput="filterTable()">
+    <table id="userTable" border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Età</th>
+                <th>Città</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mario</td>
+                <td>30</td>
+                <td>Roma</td>
+            </tr>
+            <tr>
+                <td>Luisa</td>
+                <td>25</td>
+                <td>Milano</td>
+            </tr>
+            <tr>
+                <td>Giovanni</td>
+                <td>40</td>
+                <td>Napoli</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function filterTable() {
+            let filter = document.getElementById('filter').value.toLowerCase();
+            let rows = document.querySelectorAll('#userTable tbody tr');
+            rows.forEach(row => {
+                let name = row.cells[0].textContent.toLowerCase();
+                let city = row.cells[2].textContent.toLowerCase();
+                if (name.includes(filter) || city.includes(filter)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

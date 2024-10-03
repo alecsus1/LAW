@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleria di Immagini con Lightbox</title>
+    <style>
+        #modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        #modal img {
+            max-width: 100%;
+            height: auto;
+        }
+        .gallery img {
+            width: 100px;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Galleria di Immagini</h2>
+    <div class="gallery">
+        <img src="https://picsum.photos/id/10/200/300" alt="Immagine 1" onclick="showModal(this.src)">
+        <img src="https://picsum.photos/id/11/200/300" alt="Immagine 2" onclick="showModal(this.src)">
+        <img src="https://picsum.photos/id/12/200/300" alt="Immagine 3" onclick="showModal(this.src)">
+    </div>
+
+    <div id="modal">
+        <img id="bigPicture" src="">
+        <br>
+        <button onclick="closeModal()">Chiudi</button>
+    </div>
+
+    <script>
+        function showModal(src) {
+            document.getElementById('bigPicture').src = src;
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
