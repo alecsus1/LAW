@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Sito Personale</title>
+    <style>
+        /* Stili generali */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f0f0f0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor:pointer;
+        }
+
+        /* Intestazione */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position:fixed;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin:20px;
+            gap: 20px;
+        }
+
+        nav ul li {
+            padding: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #1e90ff;
+        }
+
+        /* Sezione Hero */
+        .hero {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/55/Roma_dall%27aereo.JPG');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            padding-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #145ea8;
+        }
+
+        /* Sezione Competenze */
+        .services {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            gap: 30px;
+            background-color: #fff;
+            height: 70vh;
+        }
+
+        .service-box {
+            background-color: #f9f9f9;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            flex: 1;
+        }
+
+        .service-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #1e90ff;
+        }
+
+        .service-box p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Sezione Contatti */
+        .contact {
+            background-color: #333;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            height: 70vh;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact form button {
+            padding: 15px 30px;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact form button:hover {
+            background-color: #145ea8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e2a38;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: white;
+            transition: color 0.3s;
+        }
+
+        footer ul li a:hover {
+            color: #1e90ff;
+        }
+        .menu-icon {
+                display: none;
+            }
+
+        /* Stili responsive */
+        @media (max-width: 768px) {
+            .services {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .service-box {
+                margin-bottom: 20px;
+            }
+
+            header, .hero, .contact {
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero button {
+                padding: 10px 20px;
+            }
+
+             /* Nascondere il menu e mostrare l'icona hamburger */
+             nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #333;
+                width: 200px;
+                border-radius: 5px;
+            }
+
+            nav ul li {
+                text-align: center;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .menu-icon.active + nav ul {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Intestazione -->
+   <header>
+    <div class="logo">Il Mio Portfolio</div>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <nav>
+        <ul>
+            <li><a onclick="scrollToTarget('home')">Home</a></li>
+            <li><a onclick="scrollToTarget('services')">Servizi</a></li>
+            <li><a onclick="scrollToTarget('contact')">Contatti</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sezione Hero -->
+<section class="hero" id="home">
+    <div>
+        <h1>Benvenuto sul mio Sito</h1>
+        <p>Sviluppatore Web & Designer, pronto a creare esperienze uniche</p>
+        <button onclick="scrollTotarget('services')">Scopri di più</button>
+    </div>
+</section>
+
+<!-- Sezione Servizi -->
+<section class="services" id="services">
+    <div class="service-box">
+        <h3>Web Development</h3>
+        <p>Creazione di siti web moderni e reattivi, costruiti con le ultime tecnologie.</p>
+    </div>
+    <div class="service-box">
+        <h3>Design Grafico</h3>
+        <p>Progettazione di layout intuitivi e accattivanti per ogni tipo di business.</p>
+    </div>
+    <div class="service-box">
+        <h3>SEO & Marketing</h3>
+        <p>Ottimizzazione SEO e strategie di marketing per migliorare la visibilità online.</p>
+    </div>
+</section>
+
+<!-- Sezione Contatti -->
+<section class="contact" id="contact">
+    <h2>Contattami</h2>
+    <form action="#">
+        <input type="text" name="nome" placeholder="Il tuo nome" required>
+        <input type="email" name="email" placeholder="La tua email" required>
+        <textarea name="messaggio" rows="5" placeholder="Il tuo messaggio" required></textarea>
+        <button type="submit">Invia Messaggio</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Seguimi sui social media:</p>
+    <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+    </ul>
+    <p>&copy; 2024 Il Mio Portfolio. Tutti i diritti riservati.</p>
+</footer>
+
+    <!-- Script JavaScript -->
+    <script>
+        function scrollToTarget(target) {
+         
+            document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+        }
+       
+        function toggleMenu() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const nav = document.querySelector('nav ul');
+            menuIcon.classList.toggle('active');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+
+</body>
+</html>
+
+           
