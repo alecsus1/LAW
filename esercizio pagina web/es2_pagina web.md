@@ -37,15 +37,15 @@ Indicazioni:
 
 Struttura HTML:
 
-- Iniziare creando la struttura della pagina utilizzando i tag semantici di HTML5: <header>, <section>, <footer>. Ogni sezione deve essere contenuta in questi tag per una struttura pulita e organizzata.
+- Iniziare creando la struttura della pagina utilizzando i tag semantici di HTML5: header, section, footer. Ogni sezione deve essere contenuta in questi tag per una struttura pulita e organizzata.
 
 Intestazione (Header):
 
-- Nel <header>, inserire il logo o il nome del sito e utilizza un elenco non ordinato (<ul>) per creare la barra di navigazione. Assicurarsi che i collegamenti abbiano un aspetto uniforme e che ci sia uno spazio sufficiente tra loro. 
+- Nel header, inserire il logo o il nome del sito e utilizza un elenco non ordinato (ul) per creare la barra di navigazione. Assicurarsi che i collegamenti abbiano un aspetto uniforme e che ci sia uno spazio sufficiente tra loro. 
 
 Sezione Hero:
 
-- Per la sezione "hero", inserisre un'immagine di sfondo utilizzando CSS. Aggiungere un titolo in evidenza e un paragrafo per spiegare cosa offre il sito. Il pulsante può essere creato con un tag <button> o <a>, con uno stile che lo renda visibile sopra l'immagine.
+- Per la sezione "hero", inserisre un'immagine di sfondo utilizzando CSS. Aggiungere un titolo in evidenza e un paragrafo per spiegare cosa offre il sito. Il pulsante può essere creato con un tag button o a, con uno stile che lo renda visibile sopra l'immagine.
 
 Sezione Servizi:
 
@@ -53,11 +53,11 @@ Sezione Servizi:
 
 Sezione Contatti:
 
-- Per il modulo di contatto, usare il tag <form>. Ogni campo (nome, email, messaggio) può essere creato con i tag <input> e <textarea>. Il modulo deve essere centrato e avere un aspetto coerente con il resto della pagina.
+- Per il modulo di contatto, usare il tag form. Ogni campo (nome, email, messaggio) può essere creato con i tag input e textarea. Il modulo deve essere centrato e avere un aspetto coerente con il resto della pagina.
 
 Footer:
 
-- Nel <footer>, inserire i link ai social media all'interno di un elenco non ordinato. I link devono avere colori e spaziature uniformi. Assicurarsi che il footer sia sempre visibile e ben separato dal resto della pagina.
+- Nel footer, inserire i link ai social media all'interno di un elenco non ordinato. I link devono avere colori e spaziature uniformi. Assicurarsi che il footer sia sempre visibile e ben separato dal resto della pagina.
 Responsive Design:
 
 Utilizza le media queries in CSS per assicurarti che la pagina si adatti correttamente ai vari dispositivi. Riduci la dimensione dei testi e imposta il layout delle colonne in modo che diventino blocchi verticali su schermi più piccoli. Assicurati che il menù di navigazione si trasformi in un'icona di menu hamburger per facilitare la navigazione su dispositivi mobili.
