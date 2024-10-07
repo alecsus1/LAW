@@ -58,6 +58,7 @@ Sezione Contatti:
 Footer:
 
 - Nel footer, inserire i link ai social media all'interno di un elenco non ordinato. I link devono avere colori e spaziature uniformi. Assicurarsi che il footer sia sempre visibile e ben separato dal resto della pagina.
+
 Responsive Design:
 
-Utilizza le media queries in CSS per assicurarti che la pagina si adatti correttamente ai vari dispositivi. Riduci la dimensione dei testi e imposta il layout delle colonne in modo che diventino blocchi verticali su schermi più piccoli. Assicurati che il menù di navigazione si trasformi in un'icona di menu hamburger per facilitare la navigazione su dispositivi mobili.
+Utilizzare le media queries in CSS per assicurarsi che la pagina si adatti correttamente ai vari dispositivi. Ridurre la dimensione dei testi e impostare il layout delle colonne in modo che diventino blocchi verticali su schermi più piccoli. Assicurarsi che il menù di navigazione si trasformi in un'icona di menu hamburger per facilitare la navigazione su dispositivi mobili.
