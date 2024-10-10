@@ -5,22 +5,30 @@
     <meta charset="UTF-8">
     <title>Modulo di Contatto</title>
     <style>
-       label {
+        .container {
+            width: 30em;
+            margin:10px auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
             display: block;
             margin-bottom: 5px;
         }
 
         input[type="text"],
-        input[type="email"]{
+        input[type="email"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid grey;
             border-radius: 4px;
         }
+
         textarea {
             width: 100%;
-            height:150px;
+            height: 150px;
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid grey;
@@ -38,26 +46,27 @@
 
         button:hover {
             background-color: grey;
-        }  
-    
+        }
     </style>
 </head>
 
 <body>
 
     <h1>Modulo di Contatto</h1>
-    <form action="#">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="nome" required>
-        <br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
-        <label for="messagge">Messaggio:</label>
-        <textarea id="messaggio" name="messagge" required></textarea>
-        <br><br>
-        <button type="submit">Invia</button>
-    </form>
+    <div class="container">
+        <form action="#">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="nome" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="messagge">Messaggio:</label>
+            <textarea id="messaggio" name="messagge" required></textarea>
+            <br><br>
+            <button type="submit">Invia</button>
+        </form>
+    </div>
 
 </body>
 

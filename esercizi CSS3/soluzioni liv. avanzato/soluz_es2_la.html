@@ -6,8 +6,8 @@
     <title>Galleria Immagini</title>
     <style>
         .gallery {
-            display: grid; /* Utilizza il layout a griglia */
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Crea colonne flessibili di almeno 200px */
+            display: flex; /* Imposta il layout del contenitore delle immagini come un flexbox */
+            flex-direction: row; /* Dispone gli elementi figli del flexbox in riga */
             gap: 20px; /* Spazio tra le immagini */
             padding: 20px; /* Spazio interno attorno alla galleria */
         }
@@ -22,17 +22,22 @@
             transform: scale(1.1); /* Ingrandisce l'immagine del 10% al passaggio del mouse */
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra attorno all'immagine al passaggio del mouse */
         }
+        @media (max-width:768px) {  
+            .gallery{
+                flex-direction: column; /*Dispone gli elementi figli del flexbox in colonna quando le dimensioni dello schermo sono ridotte*/
+            }
+        }
 
     </style>
 </head>
 <body>
 
     <div class="gallery">
-        <img src="img1.jpg" alt="Immagine 1">
-        <img src="img2.jpg" alt="Immagine 2">
-        <img src="img3.jpg" alt="Immagine 3">
-        <img src="img4.jpg" alt="Immagine 4">
-        <img src="img5.jpg" alt="Immagine 5">
+        <img src="https://picsum.photos/id/1/200/300" alt="Immagine 1">
+        <img src="https://picsum.photos/id/10/200/300" alt="Immagine 2">
+        <img src="https://picsum.photos/id/11/200/300" alt="Immagine 3">
+        <img src="https://picsum.photos/id/12/200/300" alt="Immagine 4">
+        <img src="https://picsum.photos/id/13/200/300" alt="Immagine 5">
     </div>
 
 </body>
